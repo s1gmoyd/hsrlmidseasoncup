@@ -1,4 +1,4 @@
-# Society Showdown Qualifiers
+# High School RL Midseason Cup Overlays
 
 ## [Link to the control system](https://rl-overlay-control-system.herokuapp.com/)
 
