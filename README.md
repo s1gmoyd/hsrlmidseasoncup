@@ -11,8 +11,4 @@
 * [In-game Eventfeed](in-game-eventfeed.html)
 * [In-game Goal Replay](in-game-goal-replay.html)
 * [In-game Scoreline](in-game-scoreline.html)
-* [In-game Active Player](in-game-active-player-new.html)#� �h�s�r�l�m�i�d�s�e�a�s�o�n�c�u�p�
-�
-�#� �h�s�r�l�m�i�d�s�e�a�s�o�n�c�u�p�
-�
-�
+* [In-game Active Player](in-game-active-player-new.html)
