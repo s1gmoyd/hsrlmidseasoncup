@@ -1,0 +1,155 @@
+<html>
+  <head>
+    <script src="js/WsSubscribers.js"></script>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/OverlaySystemWsSubscribers.js"></script>
+    <link rel="stylesheet" href="css/in-game-goal-replay.css">
+  </head>
+  <body>
+    <div id="container" style="display: none;">
+      <div id="teamLogos">
+        <img id="blueLogo">
+        <img id="orangeLogo">
+      </div>
+      <div id="goalScorerContainer">
+        <img id="goalSVG" src="icons/stat-icons/goal.svg">
+        <div id="goalScorer">Stamiinaa;</div>
+      </div>
+      <div id="goalAssisterContainer">
+        <img id="assistSVG" src="icons/stat-icons/assist.svg">
+        <div id="goalAssister">Crimson</div>
+      </div>
+      
+      
+      <div id="goalSpeedContainer">
+        <div id="goalSpeed">125</div>
+        <div id="goalSpeedExtraText">KPH</div>
+      </div>
+      
+
+    </div>
+    <script>
+      $(() => {
+        //<!--- My RL Overlay Control System --->
+        let overlayData;
+
+        OverlayWsSubscribers.init(49321, false);
+        OverlayWsSubscribers.subscribe("overlay", "full_update-2021hsmidseason", (data) => {
+          overlayData = data;
+              $(':root').css("--blueAwayPrimaryColor", data["blueUniversity"]["color_away_primary"] !== "" && data["blueTeamAdvancedSettings"]["useDefaultColors"] === false ? `#${data["blueUniversity"]["color_away_primary"]}` : "#0051ff");
+              $(':root').css("--blueAwaySecondaryColor", data["blueUniversity"]["color_away_secondary"] !== "" && data["blueTeamAdvancedSettings"]["useDefaultColors"] === false ? `#${data["blueUniversity"]["color_away_secondary"]}` : "#0051ff");
+              $(':root').css("--blueAlternatePrimaryColor", data["blueUniversity"]["color_alternate_primary"] !== "" && data["blueTeamAdvancedSettings"]["useDefaultColors"] === false ? `#${data["blueUniversity"]["color_alternate_primary"]}` : "#0051ff");
+              $(':root').css("--blueAlternateSecondaryColor", data["blueUniversity"]["color_alternate_secondary"] !== "" && data["blueTeamAdvancedSettings"]["useDefaultColors"] === false ? `#${data["blueUniversity"]["color_alternate_secondary"]}` : "#0051ff");
+              $(':root').css("--orangeHomePrimaryColor", data["orangeUniversity"]["color_home_primary"] !== "" && data["orangeTeamAdvancedSettings"]["useDefaultColors"] === false ? `#${data["orangeUniversity"]["color_home_primary"]}` : "#ffaa00");
+              $(':root').css("--orangeHomeSecondaryColor", data["orangeUniversity"]["color_home_secondary"] !== "" && data["orangeTeamAdvancedSettings"]["useDefaultColors"] === false ? `#${data["orangeUniversity"]["color_home_secondary"]}` : "#ffaa00");
+              $(':root').css("--orangeAwayPrimaryColor", data["orangeUniversity"]["color_away_primary"] !== "" && data["orangeTeamAdvancedSettings"]["useDefaultColors"] === false ? `#${data["orangeUniversity"]["color_away_primary"]}` : "#ffaa00");
+              $(':root').css("--orangeAwaySecondaryColor", data["orangeUniversity"]["color_away_secondary"] !== "" && data["orangeTeamAdvancedSettings"]["useDefaultColors"] === false ? `#${data["orangeUniversity"]["color_away_secondary"]}` : "#ffaa00");
+              $(':root').css("--orangeAlternatePrimaryColor", data["orangeUniversity"]["color_alternate_primary"] !== "" && data["orangeTeamAdvancedSettings"]["useDefaultColors"] === false ? `#${data["orangeUniversity"]["color_alternate_primary"]}` : "#ffaa00");
+              $(':root').css("--orangeAlternateSecondaryColor", data["orangeUniversity"]["color_alternate_secondary"] !== "" && data["orangeTeamAdvancedSettings"]["useDefaultColors"] === false ? `#${data["orangeUniversity"]["color_alternate_secondary"]}` : "#ffaa00")
+              //Transparent versions
+              $(':root').css("--blueHomePrimaryColorTrans", data["blueUniversity"]["color_home_primary"] !== "" && data["blueTeamAdvancedSettings"]["useDefaultColors"] === false ? `#${data["blueUniversity"]["color_home_primary"]}e6` : "#0051ffe6");
+              $(':root').css("--blueHomeSecondaryColorTrans", data["blueUniversity"]["color_home_secondary"] !== "" && data["blueTeamAdvancedSettings"]["useDefaultColors"] === false ? `#${data["blueUniversity"]["color_home_secondary"]}e6` : "#0051ffe6");
+              $(':root').css("--blueAwayPrimaryColorTrans", data["blueUniversity"]["color_away_primary"] !== "" && data["blueTeamAdvancedSettings"]["useDefaultColors"] === false ? `#${data["blueUniversity"]["color_away_primary"]}e6` : "#0051ffe6");
+              $(':root').css("--blueAwaySecondaryColorTrans", data["blueUniversity"]["color_away_secondary"] !== "" && data["blueTeamAdvancedSettings"]["useDefaultColors"] === false ? `#${data["blueUniversity"]["color_away_secondary"]}e6` : "#0051ffe6");
+              $(':root').css("--blueAlternatePrimaryColorTrans", data["blueUniversity"]["color_alternate_primary"] !== "" && data["blueTeamAdvancedSettings"]["useDefaultColors"] === false ? `#${data["blueUniversity"]["color_alternate_primary"]}e6` : "#0051ffe6");
+              $(':root').css("--blueAlternateSecondaryColorTrans", data["blueUniversity"]["color_alternate_secondary"] !== "" && data["blueTeamAdvancedSettings"]["useDefaultColors"] === false ? `#${data["blueUniversity"]["color_alternate_secondary"]}e6` : "#0051ffe6");
+              $(':root').css("--orangeHomePrimaryColorTrans", data["orangeUniversity"]["color_home_primary"] !== "" && data["orangeTeamAdvancedSettings"]["useDefaultColors"] === false ? `#${data["orangeUniversity"]["color_home_primary"]}e6` : "#ffaa00e6");
+              $(':root').css("--orangeHomeSecondaryColorTrans", data["orangeUniversity"]["color_home_secondary"] !== "" && data["orangeTeamAdvancedSettings"]["useDefaultColors"] === false ? `#${data["orangeUniversity"]["color_home_secondary"]}e6` : "#ffaa00e6");
+              $(':root').css("--orangeAwayPrimaryColorTrans", data["orangeUniversity"]["color_away_primary"] !== "" && data["orangeTeamAdvancedSettings"]["useDefaultColors"] === false ? `#${data["orangeUniversity"]["color_away_primary"]}e6` : "#ffaa00e6");
+              $(':root').css("--orangeAwaySecondaryColorTrans", data["orangeUniversity"]["color_away_secondary"] !== "" && data["orangeTeamAdvancedSettings"]["useDefaultColors"] === false ? `#${data["orangeUniversity"]["color_away_secondary"]}e6` : "#ffaa00e6");
+              $(':root').css("--orangeAlternatePrimaryColorTrans", data["orangeUniversity"]["color_alternate_primary"] !== "" && data["orangeTeamAdvancedSettings"]["useDefaultColors"] === false ? `#${data["orangeUniversity"]["color_alternate_primary"]}e6` : "#ffaa00e6");
+              $(':root').css("--orangeAlternateSecondaryColorTrans", data["orangeUniversity"]["color_alternate_secondary"] !== "" && data["orangeTeamAdvancedSettings"]["useDefaultColors"] === false ? `#${data["orangeUniversity"]["color_alternate_secondary"]}e6` : "#ffaa00e6");
+
+
+              if (data["blueTeamAdvancedSettings"]["usePrimaryLogo"]) {
+                $("#blueLogo").attr("src", data["blueUniversity"]["logo_primary"]);
+              } else if (data["blueTeamAdvancedSettings"]["useSecondaryLogo"]) {
+                $("#blueLogo").attr("src", data["blueUniversity"]["logo_secondary"]);
+              } else if (data["blueTeamAdvancedSettings"]["useAlternateLogo"]) {
+                $("#blueLogo").attr("src", data["blueUniversity"]["logo_alternate"]);
+              }
+
+              if (data["orangeTeamAdvancedSettings"]["usePrimaryLogo"]) {
+                $("#orangeLogo").attr("src", data["orangeUniversity"]["logo_primary"]);
+              } else if (data["orangeTeamAdvancedSettings"]["useSecondaryLogo"]) {
+                $("#orangeLogo").attr("src", data["orangeUniversity"]["logo_secondary"]);
+              } else if (data["orangeTeamAdvancedSettings"]["useAlternateLogo"]) {
+                $("#orangeLogo").attr("src", data["orangeUniversity"]["logo_alternate"]);
+              }
+        });
+
+        function WhiteOrBlack(bgColor) {
+          let r = parseInt(bgColor.substring(0, 2), 16);
+          let g = parseInt(bgColor.substring(2, 4), 16);
+          let b = parseInt(bgColor.substring(4, 6), 16);
+          let uicolors = [r / 255.0, g / 255.0, b / 255.0];
+          let c = uicolors.map((col) => {
+            if (col <= 0.03928) {
+              return col / 12.92;
+            }
+            return Math.pow((col + 0.055) / 1.055, 2.4);
+          });
+          let L = (0.2126 * c[0]) + (0.7152 * c[1]) + (0.0722 * c[2]);
+          return (L > 0.179);
+        }
+
+        //<!--- SOS Overlay Control System --->
+        let goalInfo = {}
+        let goalAssister;
+        let players = {};
+
+        WsSubscribers.init(49322, false);
+        WsSubscribers.subscribe("game", "update_state", (d) => {
+          players = d["players"];
+        });
+        WsSubscribers.subscribe("game", "goal_scored", (d) => {
+          console.log(d);
+          goalInfo = d;
+          goalAssister = undefined;
+        });
+        WsSubscribers.subscribe("game", "statfeed_event", (d) => {
+          if (d["type"] === "Assist") {
+            goalAssister = players[d["main_target"]["id"]];
+          }
+        });
+        WsSubscribers.subscribe("game", "replay_start", (d) => {
+          $("#blueLogo").css("display", players[goalInfo["scorer"]["id"]]["team"] === 0 ? "block" : "none");
+          $("#orangeLogo").css("display", players[goalInfo["scorer"]["id"]]["team"] === 0 ? "none" : "block");
+
+          $("#goalScorer").text(goalInfo["scorer"]["name"]);
+          $("#goalAssister").text(goalAssister !== undefined ? goalAssister["name"] : "Unassisted");
+          $("#goalAssisterContainer").css("display", goalAssister !== undefined ? "block" : "none");
+          
+          $("#goalSpeed").text(parseInt(goalInfo["goalspeed"]) !== 0 ? parseInt(goalInfo["goalspeed"]) : parseInt(goalInfo["ball_last_touch"]["speed"]));
+
+          $("#container").addClass(players[goalInfo["scorer"]["id"]]["team"] === 0 ? "blue" : "orange");
+
+          let teamColor = players[goalInfo["scorer"]["id"]]["team"] === 0 ? "blue" : "orange";
+
+          if (overlayData[`${teamColor}TeamAdvancedSettings`]["useHome"]) {
+            $("#container").addClass("home");
+            $("#container").addClass(WhiteOrBlack(overlayData[`${teamColor}TeamAdvancedSettings`]["useDefaultColors"] === false ? `${overlayData[`${teamColor}University`]["color_home_primary"]}` : "0051ff") ? "black" : "white")
+          } else if (overlayData[`${teamColor}TeamAdvancedSettings`]["useAway"]) {
+            $("#container").addClass("away");
+            $("#container").addClass(WhiteOrBlack(overlayData[`${teamColor}TeamAdvancedSettings`]["useDefaultColors"] === false ? `${overlayData[`${teamColor}University`]["color_away_primary"]}` : "0051ff") ? "black" : "white")
+          } else if (overlayData[`${teamColor}TeamAdvancedSettings`]["useAlternate"]) {
+            $("#container").addClass("alternate");
+            $("#container").addClass(WhiteOrBlack(overlayData[`${teamColor}TeamAdvancedSettings`]["useDefaultColors"] === false ? `${overlayData[`${teamColor}University`]["color_alternate_primary"]}` : "0051ff") ? "black" : "white")
+          }
+
+          $("#container").css("display", "block");
+        });
+        WsSubscribers.subscribe("game", "replay_end", (d) => {
+          $("#container").css("display", "none");
+          $("#container").removeClass("blue");
+          $("#container").removeClass("orange");
+          $("#container").removeClass("home");
+          $("#container").removeClass("away");
+          $("#container").removeClass("alternate");
+          $("#container").removeClass("white");
+          $("#container").removeClass("black");
+        });
+      });
+    </script>
+  </body>
+</html>

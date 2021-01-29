@@ -1,0 +1,427 @@
+@font-face {
+  font-family: ApexMk2;
+  src: url(../fonts/ApexMk2-Regular.otf);
+}
+
+:root {
+  --blueHomePrimaryColor: #0051ff;
+  --blueHomeSecondaryColor: #0051ff;
+  --blueAwayPrimaryColor: #0051ff;
+  --blueAwaySecondaryColor: #0051ff;
+  --blueAlternatePrimaryColor: #0051ff;
+  --blueAlternateSecondaryColor: #0051ff;
+  --orangeHomePrimaryColor: #ffaa00;
+  --orangeHomeSecondaryColor: #ffaa00;
+  --orangeAwayPrimaryColor: #ffaa00;
+  --orangeAwaySecondaryColor: #ffaa00;
+  --orangeAlternatePrimaryColor: #ffaa00;
+  --orangeAlternateSecondaryColor: #ffaa00;
+
+  --blueHomePrimaryColorTrans: #0051ffe6;
+  --blueHomeSecondaryColorTrans: #0051ffe6;
+  --blueAwayPrimaryColorTrans: #0051ffe6;
+  --blueAwaySecondaryColorTrans: #0051ffe6;
+  --blueAlternatePrimaryColorTrans: #0051ffe6;
+  --blueAlternateSecondaryColorTrans: #0051ffe6;
+  --orangeHomePrimaryColorTrans: #ffaa00e6;
+  --orangeHomeSecondaryColorTrans: #ffaa00e6;
+  --orangeAwayPrimaryColorTrans: #ffaa00e6;
+  --orangeAwaySecondaryColorTrans: #ffaa00e6;
+  --orangeAlternatePrimaryColorTrans: #ffaa00e6;
+  --orangeAlternateSecondaryColorTrans: #ffaa00e6;
+}
+
+.teamNameContainer {
+  position: absolute;
+  top: 0px;
+  font-size: 22px;
+  font-family: ApexMk2;
+  width: 365px;
+  height: 70px;
+  line-height: 65px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.teamName {
+  position: absolute;
+}
+
+#blueTeamNameContainer {
+  left: 90px;
+}
+
+#blueTeamNameContainer div {
+  width: 100%;
+  height: 100%;
+  text-align: right;
+}
+
+#orangeTeamNameContainer div {
+  width: 100%;
+  height: 100%;
+}
+
+#orangeTeamNameContainer {
+  right: 90px;
+}
+
+.teamLogoContainer {
+  position: absolute;
+  height: 90px;
+  width: 90px;
+  top: 0px;
+}
+
+.teamLogoContainer img {
+  max-width: 90%;
+  max-height: 90%;
+  margin: auto;
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+}
+
+
+#orangeTeamLogoContainer {
+  right: 0px; 
+}
+
+.universityName {
+  position: absolute;
+  top: 60px;
+  font-size: 16px;
+  font-family: ApexMk2;
+  width: 365px;
+  height: 20px;
+  line-height: 20px;
+}
+
+#blueUniversityName {
+  text-align: right;
+  left: 90px;
+}
+
+#orangeUniversityName {
+  right: 90px;
+}
+
+#matchInfo {
+  position: absolute;
+  top: -30px;
+  font-size: 15px;
+  font-family: ApexMk2;
+  width: 365px;
+  height: 30px;
+  line-height: 30px;
+  color: black;
+  text-align: center;
+}
+
+#clockText {
+  position: absolute;
+  top: -90px;
+  font-size: 46px;
+  font-family: ApexMk2;
+  width: 365px;
+  height: 65px;
+  line-height: 65px;
+  color: black;
+  text-align: center;
+}
+
+#blueTeamScore {
+  position: absolute;
+  top: -82px;
+  font-size: 58px;
+  font-family: ApexMk2;
+  width: 120px;
+  height: 80px;
+  line-height: 80px;
+  color: black;
+  text-align: center;
+  left: -8px;
+}
+
+#orangeTeamScore {
+  position: absolute;
+  top: -82px;
+  font-size: 58px;
+  font-family: ApexMk2;
+  width: 120px;
+  height: 80px;
+  line-height: 80px;
+  color: black;
+  text-align: center;
+  right: -8px;
+}
+
+#container.hidden {
+  top: -350px;
+  transition: 1.5s ease;
+}
+
+#container {
+  top: 0px;
+  transition: 1.5s ease;
+}
+
+#container {
+  position: absolute;
+}
+
+#blueScoreContainer {
+  position: absolute;
+  top: -107px;
+  width: 125px;
+  height: 125px;
+  left: -10px;
+}
+
+#orangeScoreContainer {
+  position: absolute;
+  top: -107px;
+  right: -10px;
+  width: 125px;
+  height: 125px;
+}
+
+#blueScoreContainer circle {
+  transition: 0.1s stroke-dashoffset;
+  transform-origin: 50% 50%;
+  stroke-linecap: round;
+}
+
+#blueScoreContainer circle.home {
+  stroke: var(--blueHomePrimaryColor)
+}
+
+#blueScoreContainer circle.away {
+  stroke: var(--blueAwayPrimaryColor)
+}
+
+#blueScoreContainer circle.alternate {
+  stroke: var(--blueAlternatePrimaryColor)
+}
+
+#blueScore3.bo5 {
+  transform: rotate(279deg);
+}
+
+#blueScore2.bo5 {
+  transform: rotate(37deg);
+}
+
+#blueScore1.bo5 {
+  transform: rotate(156deg);
+}
+
+#blueScore1.bo3 {
+  transform: rotate(-85deg);
+}
+
+#blueScore2.bo3 {
+  transform: rotate(95deg);
+}
+
+#blueScore4.bo7 {
+  transform: rotate(275deg);
+}
+
+#blueScore3.bo7 {
+  transform: rotate(5deg);
+}
+
+#blueScore2.bo7 {
+  transform: rotate(95deg);
+}
+
+#blueScore1.bo7 {
+  transform: rotate(185deg);
+}
+
+#orangeScoreContainer circle {
+  transition: 0.1s stroke-dashoffset;
+  transform-origin: 50% 50%;
+  stroke-linecap: round;
+}
+
+#orangeScoreContainer circle.home {
+  stroke: var(--orangeHomePrimaryColor)
+}
+
+#orangeScoreContainer circle.away {
+  stroke: var(--orangeAwayPrimaryColor)
+}
+
+#orangeScoreContainer circle.alternate {
+  stroke: var(--orangeAlternatePrimaryColor)
+}
+
+#orangeScore1.bo5 {
+  transform: rotate(279deg);
+}
+
+#orangeScore2.bo5 {
+  transform: rotate(37deg);
+}
+
+#orangeScore3.bo5 {
+  transform: rotate(156deg);
+}
+
+#orangeScore1.bo7 {
+  transform: rotate(275deg);
+}
+
+#orangeScore2.bo7 {
+  transform: rotate(5deg);
+}
+
+#orangeScore3.bo7 {
+  transform: rotate(95deg);
+}
+
+#orangeScore4.bo7 {
+  transform: rotate(185deg);
+}
+
+#orangeScore1.bo3 {
+  transform: rotate(95deg);
+}
+
+#orangeScore2.bo3 {
+  transform: rotate(-85deg);
+}
+
+#scoreline {
+  position: absolute;
+  top: 0px;
+  width: 1315px;
+  height: 90px;
+  left: 290px;
+}
+
+#leftContainer {
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+
+#leftContainer.home {
+  background-color: var(--blueHomePrimaryColor);
+}
+
+#leftContainer.away {
+  background-color: var(--blueAwayPrimaryColor);
+}
+
+#leftContainer.alternate {
+  background-color: var(--blueAlternatePrimaryColor);
+}
+
+#rightContainer.home {
+  background-color: var(--orangeHomePrimaryColor);
+}
+
+#rightContainer.away {
+  background-color: var(--orangeAwayPrimaryColor);
+}
+
+#rightContainer.alternate {
+  background-color: var(--orangeAlternatePrimaryColor);
+}
+
+#leftContainer.white {
+  color: white;
+}
+
+#leftContainer.black {
+  color: black;
+}
+
+#rightContainer.white {
+  color: white;
+}
+
+#rightContainer.black {
+  color: black;
+}
+
+#rightContainer {
+  width: 50%;
+  height: 100%;
+  float: right;
+}
+
+#centerContainer {
+  position: absolute;
+  width: 365px;
+  left: 465px;
+  height: 0;
+  border-top: 90px solid white;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+}
+
+.partnerLogo {
+  max-width: 90%;
+  max-height: 90%;
+  margin: auto;
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+}
+
+@keyframes partnerLogoFade {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+#nuelLogoContainer {
+  opacity: 0;
+  position: absolute;
+  top: 10px;
+  left: 0px;
+  width: 300px;
+  height: 170px;
+  animation: partnerLogoFade;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+}
+
+#rkLogoContainer {
+  opacity: 0;
+  position: absolute;
+  top: 10px;
+  left: 0px;
+  width: 300px;
+  height: 175px;
+  animation: partnerLogoFade;
+  animation-duration: 20s;
+  animation-delay: 10s;
+  animation-iteration-count: infinite;
+}

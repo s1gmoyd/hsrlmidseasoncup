@@ -1,0 +1,191 @@
+@font-face {
+  font-family: ApexMk2;
+  src: url(../fonts/ApexMk2-Regular.otf);
+}
+
+:root {
+  --blueHomePrimaryColor: #0051ff;
+  --blueHomeSecondaryColor: #0051ff;
+  --blueAwayPrimaryColor: #0051ff;
+  --blueAwaySecondaryColor: #0051ff;
+  --blueAlternatePrimaryColor: #0051ff;
+  --blueAlternateSecondaryColor: #0051ff;
+  --orangeHomePrimaryColor: #ffaa00;
+  --orangeHomeSecondaryColor: #ffaa00;
+  --orangeAwayPrimaryColor: #ffaa00;
+  --orangeAwaySecondaryColor: #ffaa00;
+  --orangeAlternatePrimaryColor: #ffaa00;
+  --orangeAlternateSecondaryColor: #ffaa00;
+
+  --blueHomePrimaryColorTrans: #0051ffe6;
+  --blueHomeSecondaryColorTrans: #0051ffe6;
+  --blueAwayPrimaryColorTrans: #0051ffe6;
+  --blueAwaySecondaryColorTrans: #0051ffe6;
+  --blueAlternatePrimaryColorTrans: #0051ffe6;
+  --blueAlternateSecondaryColorTrans: #0051ffe6;
+  --orangeHomePrimaryColorTrans: #ffaa00e6;
+  --orangeHomeSecondaryColorTrans: #ffaa00e6;
+  --orangeAwayPrimaryColorTrans: #ffaa00e6;
+  --orangeAwaySecondaryColorTrans: #ffaa00e6;
+  --orangeAlternatePrimaryColorTrans: #ffaa00e6;
+  --orangeAlternateSecondaryColorTrans: #ffaa00e6;
+}
+
+#container {
+  position: absolute;
+  top: 930px;
+  left: 735px;
+}
+
+#container.blue.home #goalScorerContainer, #container.blue.home #goalAssisterContainer, #container.blue.home #teamLogos {
+  background-color: var(--blueHomePrimaryColorTrans);
+}
+
+#container.blue.away #goalScorerContainer, #container.blue.away  #goalAssisterContainer, #container.blue.away #teamLogos  {
+  background-color: var(--blueAwayPrimaryColorTrans);
+}
+
+#container.blue.alternate #goalScorerContainer, #container.blue.alternate #goalAssisterContainer, #container.blue.alternate #teamLogos {
+  background-color: var(--blueAlternatePrimaryColorTrans);
+}
+
+#container.orange.home #goalScorerContainer, #container.orange.home #goalAssisterContainer, #container.orange.home #teamLogos {
+  background-color: var(--orangeHomePrimaryColorTrans);
+}
+
+#container.orange.away #goalScorerContainer, #container.orange.away #goalAssisterContainer, #container.orange.away #teamLogos  {
+  background-color: var(--orangeAwayPrimaryColorTrans);
+}
+
+#container.orange.alternate #goalScorerContainer, #container.orange.alternate #goalAssisterContainer, #container.orange.alternate #teamLogos  {
+  background-color: var(--orangeAlternatePrimaryColorTrans);
+}
+
+#container.white #goalScorerContainer, #container.white #goalAssisterContainer {
+  color: white;
+}
+
+#container.black #goalScorerContainer, #container.black #goalAssisterContainer {
+  color: black;
+}
+
+#teamLogos {
+  position: absolute;
+  height: 75px;
+  width: 100px;
+  top: 0px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  box-sizing: border-box;
+}
+
+#teamLogos img {
+  max-width: 90%;
+  max-height: 90%;
+  margin: auto;
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+}
+
+.white #goalSVG {
+  filter: invert(1);
+}
+
+.white #assistSVG {
+  filter: invert(1);
+}
+
+#goalScorerContainer {
+  position: absolute;
+  height: 75px;
+  width: 250px;
+  left: 100px;
+  top: 0px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: ApexMk2;
+  font-size: 20px;
+  box-sizing: border-box;
+}
+
+#goalAssisterContainer {
+  position: absolute;
+  height: 50px;
+  width: 250px;
+  left: 100px;
+  top: 75px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: ApexMk2;
+  font-size: 18px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-sizing: border-box;
+}
+
+#goalSVG, #assistSVG {
+  float: left;
+  width: 15%;
+  height: 100%;
+}
+
+#goalSVG {
+  margin-left: 1%
+}
+
+#assistSVG {
+  margin-left: 4%;
+  width: 10%;
+}
+
+#goalScorer, #goalAssister {
+  float: left;
+  width: 82%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 3%;
+}
+
+#goalScorer {
+  width: 81%;
+}
+
+#goalAssister {
+  margin-left: 5%;
+  width: 80%;
+}
+
+#goalSpeedContainer {
+  background-color: rgba(25, 31, 31, 0.60);
+  position: absolute;
+  left: 350px;
+  width: 100px;
+  height: 75px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: ApexMk2;
+  color: white;
+  font-size: 24px; 
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+#goalSpeed {
+  height: 50%;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+#goalSpeedExtraText{
+  height: 50%;
+  width: 100%;
+  text-align: center;
+}

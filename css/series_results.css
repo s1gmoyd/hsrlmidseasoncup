@@ -1,0 +1,242 @@
+@font-face {
+    font-family: "FjallaOne";
+    src: url(../assets/fonts/FjallaOne-Regular.ttf);
+}
+
+@keyframes resultDisplay {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes resultReverseDisplay {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+.resultDisplay1 {
+    animation-name: resultDisplay;
+    animation-fill-mode: both;
+    animation-timing-function: ease;
+    animation-duration: 0.5s;
+}
+
+.resultReverseDisplay1 {
+    animation-name: resultReverseDisplay;
+    animation-fill-mode: both;
+    animation-timing-function: ease;
+    animation-duration: 0.5s;
+    animation-delay: 3s;
+}
+
+.resultDisplay2 {
+    animation-name: resultDisplay;
+    animation-fill-mode: both;
+    animation-timing-function: ease;
+    animation-duration: 0.5s;
+    animation-delay: 0.5s;
+}
+
+.resultReverseDisplay2 {
+    animation-name: resultReverseDisplay;
+    animation-fill-mode: both;
+    animation-timing-function: ease;
+    animation-duration: 0.5s;
+    animation-delay: 2.5s;
+}
+
+.resultDisplay3 {
+    animation-name: resultDisplay;
+    animation-fill-mode: both;
+    animation-timing-function: ease;
+    animation-duration: 0.5s;
+    animation-delay: 1s;
+}
+
+.resultReverseDisplay3 {
+    animation-name: resultReverseDisplay;
+    animation-fill-mode: both;
+    animation-timing-function: ease;
+    animation-duration: 0.5s;
+    animation-delay: 2s;
+}
+
+.resultDisplay4 {
+    animation-name: resultDisplay;
+    animation-fill-mode: both;
+    animation-timing-function: ease;
+    animation-duration: 0.5s;
+    animation-delay: 1.5s;
+}
+
+.resultReverseDisplay4 {
+    animation-name: resultReverseDisplay;
+    animation-fill-mode: both;
+    animation-timing-function: ease;
+    animation-duration: 0.5s;
+    animation-delay: 1.5s;
+}
+
+.resultDisplay5 {
+    animation-name: resultDisplay;
+    animation-fill-mode: both;
+    animation-timing-function: ease;
+    animation-duration: 0.5s;
+    animation-delay: 2s;
+}
+
+.resultReverseDisplay5 {
+    animation-name: resultReverseDisplay;
+    animation-fill-mode: both;
+    animation-timing-function: ease;
+    animation-duration: 0.5s;
+    animation-delay: 1s;
+}
+
+.resultDisplay6 {
+    animation-name: resultDisplay;
+    animation-fill-mode: both;
+    animation-timing-function: ease;
+    animation-duration: 0.5s;
+    animation-delay: 2.5s;
+}
+
+.resultReverseDisplay6 {
+    animation-name: resultReverseDisplay;
+    animation-fill-mode: both;
+    animation-timing-function: ease;
+    animation-duration: 0.5s;
+    animation-delay: 0.5s;
+}
+
+.resultDisplay7 {
+    animation-name: resultDisplay;
+    animation-fill-mode: both;
+    animation-timing-function: ease;
+    animation-duration: 0.5s;
+    animation-delay: 3s;
+}
+
+.resultReverseDisplay7 {
+    animation-name: resultReverseDisplay;
+    animation-fill-mode: both;
+    animation-timing-function: ease;
+    animation-duration: 0.5s;
+}
+
+#resultsContainer {
+    position: absolute;
+    top: 425px;
+    right: 50px;
+    width: 400px;
+    height: 300px;
+    font-family: FjallaOne;
+    color: white;
+    font-size: 28px;
+}
+
+.gameResultContainer {
+    position: relative;
+    width: 100%;
+    height: 20%;
+    line-height: 64px;
+    background-image: radial-gradient(grey, darkslategray);
+    opacity: 0;
+}
+
+.matchName {
+    position: absolute;
+    left: 0%;
+    width: 40%;
+    height: 100%;
+    text-align: center;
+}
+
+.logoContainer {
+    position: absolute;
+    left: 40%;
+    top: 6px;
+    width: 48px;
+    height: 48px;
+}
+
+.logoBackground {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.6;
+}
+
+.logo {
+    max-height: 90%;
+    max-width: 90%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 1;
+}
+
+.resultText {
+    position: absolute;
+    width: 45%;
+    height: 100%;
+    text-align: center;
+    left: 52%
+}
+
+.winColourContainer {
+    position: absolute;
+    right: 0%;
+    top: 1%;
+    height: 98%;
+    width: 3%;
+}
+
+.winColourNone {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
+
+.winColourBlue {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: blue;
+}
+
+.winColourOrange {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: orange;
+}
+
+.currentGameContainer {
+    position: absolute;
+    left: 40%;
+    width: 60%;
+    height: 100%;
+}
+
+.currentGameBackground {
+    position: absolute;
+    width: 100%;
+    top: 6px;
+    height: 80%;
+    background-color: black;
+    opacity: 0.6;
+}
+
+.currentGameText {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    text-align: center;
+}

@@ -1,0 +1,323 @@
+:root {
+  --blue-boost-1-level: 100%;
+  --blue-boost-2-level: 100%;
+  --blue-boost-3-level: 100%;
+  --orange-boost-1-level: 100%;
+  --orange-boost-2-level: 100%;
+  --orange-boost-3-level: 100%;
+
+  --blueHomePrimaryColor: #0051ff;
+  --blueHomeSecondaryColor: #0051ff;
+  --blueAwayPrimaryColor: #0051ff;
+  --blueAwaySecondaryColor: #0051ff;
+  --blueAlternatePrimaryColor: #0051ff;
+  --blueAlternateSecondaryColor: #0051ff;
+  --orangeHomePrimaryColor: #ffaa00;
+  --orangeHomeSecondaryColor: #ffaa00;
+  --orangeAwayPrimaryColor: #ffaa00;
+  --orangeAwaySecondaryColor: #ffaa00;
+  --orangeAlternatePrimaryColor: #ffaa00;
+  --orangeAlternateSecondaryColor: #ffaa00;
+
+  --blueHomePrimaryColorTrans: #0051ffe6;
+  --blueHomeSecondaryColorTrans: #0051ffe6;
+  --blueAwayPrimaryColorTrans: #0051ffe6;
+  --blueAwaySecondaryColorTrans: #0051ffe6;
+  --blueAlternatePrimaryColorTrans: #0051ffe6;
+  --blueAlternateSecondaryColorTrans: #0051ffe6;
+  --orangeHomePrimaryColorTrans: #ffaa00e6;
+  --orangeHomeSecondaryColorTrans: #ffaa00e6;
+  --orangeAwayPrimaryColorTrans: #ffaa00e6;
+  --orangeAwaySecondaryColorTrans: #ffaa00e6;
+  --orangeAlternatePrimaryColorTrans: #ffaa00e6;
+  --orangeAlternateSecondaryColorTrans: #ffaa00e6;
+}
+
+@font-face {
+  font-family: ApexMk2;
+  src: url(../fonts/ApexMk2-Regular.otf);
+}
+
+body {
+  position: absolute;
+  overflow: hidden;
+  width: 1920px;
+  height: 1080px;
+  top: 0px;
+  left: 0px;
+  font-family: ApexMk2;
+  color: white;
+  font-size: 14px;
+  margin: 0px;
+}
+
+.player {
+  position: absolute;
+  width: 225px;
+  height: 80px;
+}
+
+.blue-boost.player {
+  left: 25px;
+}
+
+.orange-boost.player {
+  right: 25px;
+}
+
+.player.one {
+  top: 300px
+}
+
+.player.two {
+  top: 425px
+}
+
+.player.three {
+  top: 550px
+}
+
+.blue, .orange {
+  position: absolute;
+}
+
+.goals, .assists, .saves, .shots {
+  top: 57px;
+} 
+
+.goals {
+  left: 37px;
+}
+
+.assists {
+  left: 95px;
+}
+
+.saves {
+  left: 150px;
+}
+
+.shots {
+  left: 202px;
+}
+
+.boost {
+  top: 29px;
+  width: 32px;
+  height: 22px;
+  line-height: 22px;
+}
+
+.boost.blue {
+  text-align: right;
+  left: 187px
+}
+
+.boost.orange {
+  left: 5px
+}
+
+.name {
+  top: 6px;
+  left: 10px;
+  width: 200px;
+  height: 20px;
+  line-height: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.name.orange {
+  text-align: right;
+  left: 12px;
+}
+
+.team-boost-container {
+  position: absolute;
+  width: 1920px;
+  height: 1080px;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+
+.boostbar.blue:after {
+  content: '\A';
+  position: absolute;
+  background: linear-gradient(90deg, rgba(212,78,45,1) 0%, rgba(230,126,71,1) 50%, rgba(246,238,109,1) 100%);
+  top:0;
+  bottom:0;
+  left:0;
+  transition: width 100ms linear;  
+}
+
+#blue-boost-1-boostbar:after {
+  width: var(--blue-boost-1-level);
+}
+
+#blue-boost-2-boostbar:after {
+  width: var(--blue-boost-2-level);
+}
+
+#blue-boost-3-boostbar:after {
+  width: var(--blue-boost-3-level);
+}
+
+#orange-boost-1-boostbar:before {
+  width: var(--orange-boost-1-level);
+}
+
+#orange-boost-2-boostbar:before {
+  width: var(--orange-boost-2-level);
+}
+
+#orange-boost-3-boostbar:before {
+  width: var(--orange-boost-3-level);
+}
+
+.boostbar {
+  position: absolute;
+  top: 30px;
+  height: 15px;
+  width: 175px;
+  border: white 2px solid;
+}
+
+.boostbar.orange {
+  left: 35px;
+  width: 175px;
+}
+
+.boostbar.blue {
+  left: 10px
+}
+
+.boostbar.orange:before {
+  content:'\A';
+  position: absolute;
+  background: linear-gradient(90deg, rgba(246,238,109,1) 0%, rgba(230,126,71,1) 50%, rgba(212,78,45,1) 100%);
+  top:0; 
+  bottom:0;
+  right:0;  
+  transition: width 100ms linear;
+}
+
+#blue-boost-container.hidden {
+  left: -350px;
+  transition: left 1s ease;
+}
+
+#blue-boost-container {
+  left: 0px;
+  transition: left 1s ease;
+}
+
+#orange-boost-container.hidden {
+  left: 350px;
+  transition: left 1s ease;
+}
+
+#orange-boost-container {
+  left: 0px;
+  transition: left 1s ease;
+}
+
+.blue-boost, .orange-boost {
+  border-radius: 10px;
+}
+
+#blue-boost-container.white {
+  color: white;
+}
+
+#blue-boost-container.black {
+  color: black;
+}
+
+#orange-boost-container.white {
+  color: white;
+}
+
+#orange-boost-container.black {
+  color: black;
+}
+
+#blue-boost-container.white .boostbar {
+  border: white 2px solid;
+}
+
+#blue-boost-container.black .boostbar {
+  border: black 2px solid;
+}
+
+#orange-boost-container.white .boostbar {
+  border: white 2px solid;
+}
+
+#orange-boost-container.black .boostbar {
+  border: black 2px solid;
+}
+
+#blue-boost-container.white img {
+  filter: invert(1);
+}
+
+#blue-boost-container.black img {
+  filter: invert(0);
+}
+
+#orange-boost-container.white img {
+  filter: invert(1);
+}
+
+#orange-boost-container.black img {
+  filter: invert(0);
+}
+
+#blue-boost-container.home .blue-boost {
+  background-color: var(--blueHomePrimaryColorTrans);
+}
+
+#blue-boost-container.away .blue-boost  {
+  background-color: var(--blueAwayPrimaryColorTrans);
+}
+
+#blue-boost-container.alternate .blue-boost  {
+  background-color: var(--blueAlternatePrimaryColorTrans);
+}
+
+#orange-boost-container.home .orange-boost {
+  background-color: var(--orangeHomePrimaryColorTrans);
+}
+
+#orange-boost-container.away .orange-boost {
+  background-color: var(--orangeAwayPrimaryColorTrans);
+}
+
+#orange-boost-container.alternate .orange-boost {
+  background-color: var(--orangeAlternatePrimaryColorTrans);
+}
+
+.icon {
+  filter: invert(1);
+  width: 20px;
+  height: 20px;
+  top: 55px;
+  position: absolute;
+}
+
+.goal.icon {
+  left: 12px;
+}
+
+.assist.icon {
+  left: 68px;
+}
+
+.save.icon {
+  left: 126px;
+}
+
+.shot.icon {
+  left: 177px;
+}

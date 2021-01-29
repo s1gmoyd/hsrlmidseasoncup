@@ -1,0 +1,145 @@
+@font-face {
+  font-family: ApexMk2;
+  src: url(../fonts/ApexMk2-Regular.otf);
+}
+
+:root {
+  --blueHomePrimaryColor: #0051ff;
+  --blueHomeSecondaryColor: #0051ff;
+  --blueAwayPrimaryColor: #0051ff;
+  --blueAwaySecondaryColor: #0051ff;
+  --blueAlternatePrimaryColor: #0051ff;
+  --blueAlternateSecondaryColor: #0051ff;
+  --orangeHomePrimaryColor: #ffaa00;
+  --orangeHomeSecondaryColor: #ffaa00;
+  --orangeAwayPrimaryColor: #ffaa00;
+  --orangeAwaySecondaryColor: #ffaa00;
+  --orangeAlternatePrimaryColor: #ffaa00;
+  --orangeAlternateSecondaryColor: #ffaa00;
+
+  --blueHomePrimaryColorTrans: #0051ff00;
+  --blueHomeSecondaryColorTrans: #0051ff00;
+  --blueAwayPrimaryColorTrans: #0051ff00;
+  --blueAwaySecondaryColorTrans: #0051ff00;
+  --blueAlternatePrimaryColorTrans: #0051ff00;
+  --blueAlternateSecondaryColorTrans: #0051ff00;
+  --orangeHomePrimaryColorTrans: #ffaa0000;
+  --orangeHomeSecondaryColorTrans: #ffaa0000;
+  --orangeAwayPrimaryColorTrans: #ffaa0000;
+  --orangeAwaySecondaryColorTrans: #ffaa0000;
+  --orangeAlternatePrimaryColorTrans: #ffaa0000;
+  --orangeAlternateSecondaryColorTrans: #ffaa0000;
+}
+
+#eventfeed {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  display: inline-block;
+  font-size: 18px;
+  font-family: ApexMk2;
+  text-transform: uppercase;
+  padding-right: 15px;
+}
+
+.event {
+  position: relative;
+  height: 40px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  line-height: 40px;
+  text-align: right;
+}
+
+.left {
+  position: relative;
+  height: 100%;
+  border-radius: 40px 0px 0px 40px;
+  display: inline-block;
+  padding-left: 15px;
+  padding-right: 25px;
+  margin-right: -25px;
+}
+
+.icon {
+  position: relative;
+  height: 40px;
+  width: 40px;
+  display: inline-block;
+  z-index: 1;
+}
+
+.icon img {
+  max-width: 85%;
+  max-height: 85%;
+  display: inline-block;
+  margin: 0 auto;
+  vertical-align: middle;
+  filter: invert(1);
+}
+
+.right {
+  position: relative;
+  height: 100%;
+  border-radius: 0px 40px 40px 0px;
+  display: inline-block;
+  padding-right: 15px;
+  padding-left: 25px;
+  margin-left: -25px;
+}
+
+.left.blue.home {
+  background: linear-gradient(to right, var(--blueHomePrimaryColor) 75%, var(--blueHomePrimaryColorTrans));
+}
+
+.left.blue.away {
+  background: linear-gradient(to right, var(--blueAwayPrimaryColor) 75%, var(--blueAwayPrimaryColorTrans));
+}
+
+.left.blue.alternate {
+  background: linear-gradient(to right, var(--blueAlternatePrimaryColor) 75%, var(--blueAlternatePrimaryColorTrans));
+}
+
+.left.orange.home {
+  background: linear-gradient(to right, var(--orangeHomePrimaryColor) 75%, var(--orangeHomePrimaryColorTrans));
+}
+
+.left.orange.away {
+  background: linear-gradient(to right, var(--orangeAwayPrimaryColor) 75%, var(--orangeAwayPrimaryColorTrans));
+}
+
+.left.orange.alternate {
+  background: linear-gradient(to right, var(--orangeAlternatePrimaryColor) 75%, var(--orangeAlternatePrimaryColorTrans));
+}
+
+.right.blue.home {
+  background: linear-gradient(to left, var(--blueHomePrimaryColor) 75%, var(--blueHomePrimaryColorTrans));
+}
+
+.right.blue.away {
+  background: linear-gradient(to left, var(--blueAwayPrimaryColor) 75%, var(--blueAwayPrimaryColorTrans));
+}
+
+.right.blue.alternate {
+  background: linear-gradient(to left, var(--blueAlternatePrimaryColor) 75%, var(--blueAlternatePrimaryColorTrans));
+}
+
+.right.orange.home {
+  background: linear-gradient(to left, var(--orangeHomePrimaryColor) 75%, var(--orangeHomePrimaryColorTrans));
+}
+
+.right.orange.away {
+  background: linear-gradient(to left, var(--orangeAwayPrimaryColor) 75%, var(--orangeAwayPrimaryColorTrans));
+}
+
+.right.orange.alternate {
+  background: linear-gradient(to left, var(--orangeAlternatePrimaryColor) 75%, var(--orangeAlternatePrimaryColorTrans));
+}
+
+.white {
+  color: white;
+}
+
+.black {
+  color: black;
+}

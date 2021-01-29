@@ -1,0 +1,142 @@
+@font-face {
+    font-family: "FjallaOne";
+    src: url(../assets/fonts/FjallaOne-Regular.ttf);
+}
+
+:root {
+    --default-blue-team-name-left: 284px;
+    --default-blue-team-name-top: 490px;
+    --default-blue-team-name-fontSize: 42px;
+
+    --default-blue-team-logo-left: 805px;
+    --default-blue-team-logo-top: 491px;
+
+    --default-orange-team-name-left: 1128px;
+    --default-orange-team-name-top: 490px;
+    --default-orange-team-name-fontSize: 42px;
+
+    --default-orange-team-logo-left: 1035px;
+    --default-orange-team-logo-top: 491px;
+}
+
+body {
+    background-image: url("../assets/backgrounds/team-lineup.png");
+    width: 1920px;
+    height: 1080px;
+    overflow: hidden;
+}
+
+#nuelLogoContainer {
+    position: absolute;
+    top: 40px;
+    left: 1630px;
+    width: 250px;
+    height: 170px;
+}
+
+#rkLogoContainer {
+    position: absolute;
+    top: 20px;
+    left: 0px;
+    width: 250px;
+    height: 170px;
+}
+
+.teamNameContainer {
+    position: absolute;
+    width: 511px;
+    height: 73px;
+    line-height: 73px;
+    white-space: nowrap;
+    font-family: "FjallaOne";
+    color: white;
+}
+
+#blueTeamNameContainer {
+    text-align: end;
+    left: var(--default-blue-team-name-left);
+    top: var(--default-blue-team-name-top);
+    font-size: var(--default-blue-team-name-fontSize);
+}
+
+#orangeTeamNameContainer {
+    left: var(--default-orange-team-name-left);
+    top: var(--default-orange-team-name-top);
+    font-size: var(--default-orange-team-name-fontSize);
+}
+
+.teamLogoContainer {
+    position: absolute;
+    width: 85px;
+    height: 72px;
+}
+
+#blueTeamLogoContainer {
+    position: absolute;
+    left: var(--default-blue-team-logo-left);
+    top: var(--default-blue-team-logo-top);
+}
+
+#orangeTeamLogoContainer {
+    position: absolute;
+    left: var(--default-orange-team-logo-left);
+    top: var(--default-orange-team-logo-top);
+}
+
+.teamLogo, .partnerLogo {
+    max-height: 95%;
+    max-width: 95%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.playerName {
+    position: absolute;
+    width: 511px;
+    height: 73px;
+    line-height: 73px;
+    white-space: nowrap;
+    font-family: "FjallaOne";
+    color: white;
+    font-size: 42px;
+}
+
+.bluePlayerName {
+    text-align: right;
+}
+
+#blueStarter1 {
+    left: 284px;
+    top: 585px;
+}
+
+#blueStarter2 {
+    left: 284px;
+    top: 676px;
+}
+
+#blueStarter3 {
+    left: 284px;
+    top: 767px;
+}
+
+#orangeStarter1 {
+    left: 1130px;
+    top: 585px;
+}
+
+#orangeStarter2 {
+    left: 1130px;
+    top: 676px;
+}
+
+#orangeStarter3 {
+    left: 1130px;
+    top: 767px;
+}

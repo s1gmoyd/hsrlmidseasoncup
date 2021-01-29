@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>2 Caster Cams Mid-Series Overlay | NUEL Winter 2020 | Rocket Kingdom</title>
+        <script src="js/jquery-3.5.1.min.js"></script>
+        <script src="js/OverlaySystemWsSubscribers.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/2-caster-cams-overlay-style.css">
+    </head>
+    <body id="body">
+      <div id="scoreline">
+        <div id="leftContainer">
+          <div id="blueTeamNameContainerTop" class="teamNameContainerTop">
+            <div id="blueTeamNameTop" class="teamNameTop"></div>
+            <div id="blueTeamNameShortTop" class="teamNameTop"></div>
+          </div>
+          <div id="blueUniversityNameTop" class="universityName"></div>
+          <div id="blueTeamLogoContainerTop" class="teamLogoContainerTop">
+            <img id="blueTeamLogoTop" class="teamLogo">
+          </div>
+          <div id="blueScoreTop"></div>
+        </div>
+        <div id="rightContainer">
+          <div id="orangeTeamNameContainerTop" class="teamNameContainerTop">
+            <div id="orangeTeamNameTop" class="teamNameTop"></div>
+            <div id="orangeTeamNameShortTop" class="teamNameTop"></div>
+          </div>    
+          <div id="orangeUniversityNameTop" class="universityName"></div>
+          <div id="orangeTeamLogoContainerTop" class="teamLogoContainerTop">
+            <img id="orangeTeamLogoTop" class="teamLogo">
+          </div>
+          <div id="orangeScoreTop"></div>
+        </div>
+      </div>
+
+        <div id="casterOneImageContainer">
+            <img id="casterOneImage" class="casterImage"/>
+        </div>
+
+        <div id=casterOneTwitterContainer class="casterTwitterContainer">
+            <div id="casterOneTwitter"></div>
+        </div>
+
+        <div id="casterTwoImageContainer">
+            <img id="casterTwoImage" class="casterImage" />
+        </div>
+
+        <div id=casterTwoTwitterContainer class="casterTwitterContainer">
+            <div id="casterTwoTwitter"></div>
+        </div>
+
+        <div id="blueTeamLineup" class="teamLineup">
+          <div class="teamLineupHeader">
+            <div id="blueTeamNameContainer" class="teamNameContainer">
+              <div id="blueTeamName" class="teamName"></div>
+              <div id="blueTeamNameShort" class="teamName"></div>
+            </div>
+            <div id="blueTeamLogoContainer" class="teamLogoContainer">
+              <img id="blueTeamLogo" class="teamLogoTop" />
+            </div>
+          </div>
+          <div class="player one container blue">
+            <div id="bluePlayer1" class="blue player one name"></div>
+          </div>
+          <div class="player two container blue">
+            <div id="bluePlayer2" class="blue player two name"></div>
+          </div>
+          <div class="player three container blue">
+            <div id="bluePlayer3" class="blue player three name"></div>
+          </div>
+        </div>
+
+        <div id="orangeTeamLineup" class="teamLineup">
+          <div class="teamLineupHeader">
+            <div id="orangeTeamNameContainer" class="teamNameContainer">
+              <div id="orangeTeamName" class="teamName"></div>
+              <div id="orangeTeamNameShort" class="teamName"></div>
+            </div>
+            <div id="orangeTeamLogoContainer" class="teamLogoContainer">
+              <img id="orangeTeamLogo" class="teamLogoTop" />
+            </div>
+          </div>
+          <div class="player one container orange">
+            <div id="orangePlayer1" class="orange player one name"></div>
+          </div>
+          <div class="player two container orange">
+            <div id="orangePlayer2" class="orange player two name"></div>
+          </div>
+          <div class="player three container orange">
+            <div id="orangePlayer3" class="orange player three name"></div>
+          </div>
+        </div>
+
+        <div id="gameResults">
+          <div id="matchInfo" class="game match info"></div>
+          <div id="match1Container" class="game container">
+            <div id="match1BlueLogoContainer" class="teamLogoContainer game blue">
+              <img id="match1BlueLogo" class="teamLogo" />
+            </div>
+            <div id="match1BlueScore" class="game blue score"></div>
+            <div id="match1ScoreSeparator" class="game score separator">-</div>
+            <div id="match1OrangeScore" class="game orange score"></div>
+            <div id="match1OrangeLogoContainer" class="teamLogoContainer game orange">
+              <img id="match1OrangeLogo" class="teamLogo" />
+            </div>
+          </div>
+          <div id="match2Container" class="game container">
+            <div id="match2BlueLogoContainer" class="teamLogoContainer game blue">
+              <img id="match2BlueLogo" class="teamLogo" />
+            </div>
+            <div id="match2BlueScore" class="game blue score"></div>
+            <div id="match2ScoreSeparator" class="game score separator">-</div>
+            <div id="match2OrangeScore" class="game orange score"></div>
+            <div id="match2OrangeLogoContainer" class="teamLogoContainer game orange">
+              <img id="match2OrangeLogo" class="teamLogo" />
+            </div>
+          </div>
+          <div id="match3Container" class="game container">
+            <div id="match3BlueLogoContainer" class="teamLogoContainer game blue">
+              <img id="match3BlueLogo" class="teamLogo" />
+            </div>
+            <div id="match3BlueScore" class="game blue score"></div>
+            <div id="match3ScoreSeparator" class="game score separator">-</div>
+            <div id="match3OrangeScore" class="game orange score"></div>
+            <div id="match3OrangeLogoContainer" class="teamLogoContainer game orange">
+              <img id="match3OrangeLogo" class="teamLogo" />
+            </div>
+          </div>
+          <div id="match4Container" class="game container">
+            <div id="match4BlueLogoContainer" class="teamLogoContainer game blue">
+              <img id="match4BlueLogo" class="teamLogo" />
+            </div>
+            <div id="match4BlueScore" class="game blue score"></div>
+            <div id="match4ScoreSeparator" class="game score separator">-</div>
+            <div id="match4OrangeScore" class="game orange score"></div>
+            <div id="match4OrangeLogoContainer" class="teamLogoContainer game orange">
+              <img id="match4OrangeLogo" class="teamLogo" />
+            </div>
+          </div>
+          <div id="match5Container" class="game container">
+            <div id="match5BlueLogoContainer" class="teamLogoContainer game blue">
+              <img id="match5BlueLogo" class="teamLogo" />
+            </div>
+            <div id="match5BlueScore" class="game blue score"></div>
+            <div id="match5ScoreSeparator" class="game score separator">-</div>
+            <div id="match5OrangeScore" class="game orange score"></div>
+            <div id="match5OrangeLogoContainer" class="teamLogoContainer game orange">
+              <img id="match5OrangeLogo" class="teamLogo" />
+            </div>
+          </div>
+          <div id="match6Container" class="game container">
+            <div id="match6BlueLogoContainer" class="teamLogoContainer game blue">
+              <img id="match6BlueLogo" class="teamLogo" />
+            </div>
+            <div id="match6BlueScore" class="game blue score"></div>
+            <div id="match6ScoreSeparator" class="game score separator">-</div>
+            <div id="match6OrangeScore" class="game orange score"></div>
+            <div id="match6OrangeLogoContainer" class="teamLogoContainer game orange">
+              <img id="match6OrangeLogo" class="teamLogo" />
+            </div>
+          </div>
+          <div id="match7Container" class="game container">
+            <div id="match7BlueLogoContainer" class="teamLogoContainer game blue">
+              <img id="match7BlueLogo" class="teamLogo" />
+            </div>
+            <div id="match7BlueScore" class="game blue score"></div>
+            <div id="match7ScoreSeparator" class="game score separator">-</div>
+            <div id="match7OrangeScore" class="game orange score"></div>
+            <div id="match7OrangeLogoContainer" class="teamLogoContainer game orange">
+              <img id="match7OrangeLogo" class="teamLogo" />
+            </div>
+          </div>
+        </div>
+
+        <script>
+          $(() => {
+            //<!--- My RL Overlay Control System --->
+            OverlayWsSubscribers.init(49321, false);
+            OverlayWsSubscribers.subscribe("overlay", "full_update-2021hsmidseason", (d) => {
+              $(':root').css("--blueHomePrimaryColor", d["blueUniversity"]["color_home_primary"] !== "" && d["blueTeamAdvancedSettings"]["useDefaultColors"] === false ? `#${d["blueUniversity"]["color_home_primary"]}` : "#0051ff");
+                  $(':root').css("--blueHomeSecondaryColor", d["blueUniversity"]["color_home_secondary"] !== "" && d["blueTeamAdvancedSettings"]["useDefaultColors"] === false ? `#${d["blueUniversity"]["color_home_secondary"]}` : "#0051ff");
+                  $(':root').css("--blueAwayPrimaryColor", d["blueUniversity"]["color_away_primary"] !== "" && d["blueTeamAdvancedSettings"]["useDefaultColors"] === false ? `#${d["blueUniversity"]["color_away_primary"]}` : "#0051ff");
+                  $(':root').css("--blueAwaySecondaryColor", d["blueUniversity"]["color_away_secondary"] !== "" && d["blueTeamAdvancedSettings"]["useDefaultColors"] === false ? `#${d["blueUniversity"]["color_away_secondary"]}` : "#0051ff");
+                  $(':root').css("--blueAlternatePrimaryColor", d["blueUniversity"]["color_alternate_primary"] !== "" && d["blueTeamAdvancedSettings"]["useDefaultColors"] === false ? `#${d["blueUniversity"]["color_alternate_primary"]}` : "#0051ff");
+                  $(':root').css("--blueAlternateSecondaryColor", d["blueUniversity"]["color_alternate_secondary"] !== "" && d["blueTeamAdvancedSettings"]["useDefaultColors"] === false ? `#${d["blueUniversity"]["color_alternate_secondary"]}` : "#0051ff");
+                  $(':root').css("--orangeHomePrimaryColor", d["orangeUniversity"]["color_home_primary"] !== "" && d["orangeTeamAdvancedSettings"]["useDefaultColors"] === false ? `#${d["orangeUniversity"]["color_home_primary"]}` : "#ffaa00");
+                  $(':root').css("--orangeHomeSecondaryColor", d["orangeUniversity"]["color_home_secondary"] !== "" && d["orangeTeamAdvancedSettings"]["useDefaultColors"] === false ? `#${d["orangeUniversity"]["color_home_secondary"]}` : "#ffaa00");
+                  $(':root').css("--orangeAwayPrimaryColor", d["orangeUniversity"]["color_away_primary"] !== "" && d["orangeTeamAdvancedSettings"]["useDefaultColors"] === false ? `#${d["orangeUniversity"]["color_away_primary"]}` : "#ffaa00");
+                  $(':root').css("--orangeAwaySecondaryColor", d["orangeUniversity"]["color_away_secondary"] !== "" && d["orangeTeamAdvancedSettings"]["useDefaultColors"] === false ? `#${d["orangeUniversity"]["color_away_secondary"]}` : "#ffaa00");
+                  $(':root').css("--orangeAlternatePrimaryColor", d["orangeUniversity"]["color_alternate_primary"] !== "" && d["orangeTeamAdvancedSettings"]["useDefaultColors"] === false ? `#${d["orangeUniversity"]["color_alternate_primary"]}` : "#ffaa00");
+                  $(':root').css("--orangeAlternateSecondaryColor", d["orangeUniversity"]["color_alternate_secondary"] !== "" && d["orangeTeamAdvancedSettings"]["useDefaultColors"] === false ? `#${d["orangeUniversity"]["color_alternate_secondary"]}` : "#ffaa00");
+
+                  //Transparent versions
+                  $(':root').css("--blueHomePrimaryColorTrans", d["blueUniversity"]["color_home_primary"] !== "" && d["blueTeamAdvancedSettings"]["useDefaultColors"] === false ? `#${d["blueUniversity"]["color_home_primary"]}e6` : "#0051ffe6");
+                  $(':root').css("--blueHomeSecondaryColorTrans", d["blueUniversity"]["color_home_secondary"] !== "" && d["blueTeamAdvancedSettings"]["useDefaultColors"] === false ? `#${d["blueUniversity"]["color_home_secondary"]}e6` : "#0051ffe6");
+                  $(':root').css("--blueAwayPrimaryColorTrans", d["blueUniversity"]["color_away_primary"] !== "" && d["blueTeamAdvancedSettings"]["useDefaultColors"] === false ? `#${d["blueUniversity"]["color_away_primary"]}e6` : "#0051ffe6");
+                  $(':root').css("--blueAwaySecondaryColorTrans", d["blueUniversity"]["color_away_secondary"] !== "" && d["blueTeamAdvancedSettings"]["useDefaultColors"] === false ? `#${d["blueUniversity"]["color_away_secondary"]}e6` : "#0051ffe6");
+                  $(':root').css("--blueAlternatePrimaryColorTrans", d["blueUniversity"]["color_alternate_primary"] !== "" && d["blueTeamAdvancedSettings"]["useDefaultColors"] === false ? `#${d["blueUniversity"]["color_alternate_primary"]}e6` : "#0051ffe6");
+                  $(':root').css("--blueAlternateSecondaryColorTrans", d["blueUniversity"]["color_alternate_secondary"] !== "" && d["blueTeamAdvancedSettings"]["useDefaultColors"] === false ? `#${d["blueUniversity"]["color_alternate_secondary"]}e6` : "#0051ffe6");
+                  $(':root').css("--orangeHomePrimaryColorTrans", d["orangeUniversity"]["color_home_primary"] !== "" && d["orangeTeamAdvancedSettings"]["useDefaultColors"] === false ? `#${d["orangeUniversity"]["color_home_primary"]}e6` : "#ffaa00e6");
+                  $(':root').css("--orangeHomeSecondaryColorTrans", d["orangeUniversity"]["color_home_secondary"] !== "" && d["orangeTeamAdvancedSettings"]["useDefaultColors"] === false ? `#${d["orangeUniversity"]["color_home_secondary"]}e6` : "#ffaa00e6");
+                  $(':root').css("--orangeAwayPrimaryColorTrans", d["orangeUniversity"]["color_away_primary"] !== "" && d["orangeTeamAdvancedSettings"]["useDefaultColors"] === false ? `#${d["orangeUniversity"]["color_away_primary"]}e6` : "#ffaa00e6");
+                  $(':root').css("--orangeAwaySecondaryColorTrans", d["orangeUniversity"]["color_away_secondary"] !== "" && d["orangeTeamAdvancedSettings"]["useDefaultColors"] === false ? `#${d["orangeUniversity"]["color_away_secondary"]}e6` : "#ffaa00e6");
+                  $(':root').css("--orangeAlternatePrimaryColorTrans", d["orangeUniversity"]["color_alternate_primary"] !== "" && d["orangeTeamAdvancedSettings"]["useDefaultColors"] === false ? `#${d["orangeUniversity"]["color_alternate_primary"]}e6` : "#ffaa00e6");
+                  $(':root').css("--orangeAlternateSecondaryColorTrans", d["orangeUniversity"]["color_alternate_secondary"] !== "" && d["orangeTeamAdvancedSettings"]["useDefaultColors"] === false ? `#${d["orangeUniversity"]["color_alternate_secondary"]}e6` : "#ffaa00e6");
+            
+                  function WhiteOrBlack(bgColor) {
+                    let r = parseInt(bgColor.substring(0, 2), 16);
+                    let g = parseInt(bgColor.substring(2, 4), 16);
+                    let b = parseInt(bgColor.substring(4, 6), 16);
+                    let uicolors = [r / 255.0, g / 255.0, b / 255.0];
+                    let c = uicolors.map((col) => {
+                      if (col <= 0.03928) {
+                        return col / 12.92;
+                      }
+                      return Math.pow((col + 0.055) / 1.055, 2.4);
+                    });
+                    let L = (0.2126 * c[0]) + (0.7152 * c[1]) + (0.0722 * c[2]);
+                    return (L > 0.179);
+                  }
+
+                  $("#blueTeamLineup").removeClass("home");
+                  $("#blueTeamLineup").removeClass("away");
+                  $("#blueTeamLineup").removeClass("alternate");
+                  $("#blueTeamLineup").removeClass("white");
+                  $("#blueTeamLineup").removeClass("black");
+                  $("#orangeTeamLineup").removeClass("home");
+                  $("#orangeTeamLineup").removeClass("away");
+                  $("#orangeTeamLineup").removeClass("alternate");
+                  $("#orangeTeamLineup").removeClass("white");
+                  $("#orangeTeamLineup").removeClass("black");
+                  $("#leftContainer").removeClass("home");
+                  $("#leftContainer").removeClass("away");
+                  $("#leftContainer").removeClass("alternate");
+                  $("#leftContainer").removeClass("white");
+                  $("#leftContainer").removeClass("black");
+                  $("#rightContainer").removeClass("home");
+                  $("#rightContainer").removeClass("away");
+                  $("#rightContainer").removeClass("alternate");
+                  $("#rightContainer").removeClass("white");
+                  $("#rightContainer").removeClass("black");
+
+                  if (d["blueTeamAdvancedSettings"]["useHome"]) {
+                    $("#leftContainer").addClass("home");
+                    $("#leftContainer").addClass(WhiteOrBlack(d["blueTeamAdvancedSettings"]["useDefaultColors"] === false ? `${d["blueUniversity"]["color_home_primary"]}` : "0051ff") ? "black" : "white")
+                    $("#blueTeamLineup").addClass("home");
+                    $("#blueTeamLineup").addClass(WhiteOrBlack(d["blueTeamAdvancedSettings"]["useDefaultColors"] === false ? `${d["blueUniversity"]["color_home_primary"]}` : "0051ff") ? "black" : "white")
+                  } else if (d["blueTeamAdvancedSettings"]["useAway"]) {
+                    $("#leftContainer").addClass("away");
+                    $("#leftContainer").addClass(WhiteOrBlack(d["blueTeamAdvancedSettings"]["useDefaultColors"] === false ? `${d["blueUniversity"]["color_away_primary"]}` : "0051ff") ? "black" : "white")
+                    $("#blueTeamLineup").addClass("away");
+                    $("#blueTeamLineup").addClass(WhiteOrBlack(d["blueTeamAdvancedSettings"]["useDefaultColors"] === false ? `${d["blueUniversity"]["color_away_primary"]}` : "0051ff") ? "black" : "white")
+                  } else if (d["blueTeamAdvancedSettings"]["useAlternate"]) {
+                    $("#leftContainer").addClass("alternate");
+                    $("#leftContainer").addClass(WhiteOrBlack(d["blueTeamAdvancedSettings"]["useDefaultColors"] === false ? `${d["blueUniversity"]["color_alternate_primary"]}` : "0051ff") ? "black" : "white")  
+                    $("#blueTeamLineup").addClass("alternate");
+                    $("#blueTeamLineup").addClass(WhiteOrBlack(d["blueTeamAdvancedSettings"]["useDefaultColors"] === false ? `${d["blueUniversity"]["color_alternate_primary"]}` : "0051ff") ? "black" : "white")
+                  }
+
+                  if (d["orangeTeamAdvancedSettings"]["useHome"]) {
+                    $("#rightContainer").addClass("home");
+                    $("#rightContainer").addClass(WhiteOrBlack(d["orangeTeamAdvancedSettings"]["useDefaultColors"] === false ? `${d["orangeUniversity"]["color_home_primary"]}` : "0051ff") ? "black" : "white")
+                    $("#orangeTeamLineup").addClass("home");
+                    $("#orangeTeamLineup").addClass(WhiteOrBlack(d["orangeTeamAdvancedSettings"]["useDefaultColors"] === false ? `${d["orangeUniversity"]["color_home_primary"]}` : "0051ff") ? "black" : "white")
+                  } else if (d["orangeTeamAdvancedSettings"]["useAway"]) {
+                    $("#rightContainer").addClass("away");
+                    $("#rightContainer").addClass(WhiteOrBlack(d["orangeTeamAdvancedSettings"]["useDefaultColors"] === false ? `${d["orangeUniversity"]["color_away_primary"]}` : "0051ff") ? "black" : "white")
+                    $("#orangeTeamLineup").addClass("away");
+                    $("#orangeTeamLineup").addClass(WhiteOrBlack(d["orangeTeamAdvancedSettings"]["useDefaultColors"] === false ? `${d["orangeUniversity"]["color_away_primary"]}` : "0051ff") ? "black" : "white")
+                  } else if (d["orangeTeamAdvancedSettings"]["useAlternate"]) {
+                    $("#rightContainer").addClass("alternate");
+                    $("#rightContainer").addClass(WhiteOrBlack(d["orangeTeamAdvancedSettings"]["useDefaultColors"] === false ? `${d["orangeUniversity"]["color_alternate_primary"]}` : "0051ff") ? "black" : "white")
+                    $("#orangeTeamLineup").addClass("alternate");
+                    $("#orangeTeamLineup").addClass(WhiteOrBlack(d["orangeTeamAdvancedSettings"]["useDefaultColors"] === false ? `${d["orangeUniversity"]["color_alternate_primary"]}` : "0051ff") ? "black" : "white")
+                  }
+
+                  $("#blueTeamLogoContainerTop").css("visibility", d["blueTeamAdvancedSettings"]["hideTeamLogo"] ? "hidden" : "visible");
+                  $("#orangeTeamLogoContainerTop").css("visibility", d["orangeTeamAdvancedSettings"]["hideTeamLogo"]  ? "hidden" : "visible");
+                
+                  $("#blueTeamNameTop").text(d["blueTeam"]["name"]);
+                  $("#blueTeamNameShortTop").text(d["blueTeam"]["name_short"]);
+                  $("#blueTeamNameContainerTop").css("visibility", d["blueTeamAdvancedSettings"]["hideTeamName"] ? "hidden" : "none");
+                  $("#orangeTeamNameTop").text(d["orangeTeam"]["name"]);
+                  $("#orangeTeamNameShortTop").text(d["orangeTeam"]["name_short"]);
+
+                  $("#blueTeamNameTop").css("visibility", d["blueTeamAdvancedSettings"]["useShortTeamName"] ? "hidden" : "visible");
+                  $("#blueTeamNameShortTop").css("visibility", d["blueTeamAdvancedSettings"]["useShortTeamName"] ? "visible" : "hidden");
+                  $("#orangeTeamNameTop").css("visibility", d["orangeTeamAdvancedSettings"]["useShortTeamName"] ? "hidden" : "visible");
+                  $("#orangeTeamNameShortTop").css("visibility", d["orangeTeamAdvancedSettings"]["useShortTeamName"] ? "visible" : "hidden");
+                
+                  $("#blueTeamNameContainerTop").css("display", d["blueTeamAdvancedSettings"]["hideTeamName"] ? "none" : "block");
+                  $("#orangeTeamNameContainerTop").css("display", d["orangeTeamAdvancedSettings"]["hideTeamName"] ? "none" : "block");
+
+                  $("#blueUniversityNameTop").text(d["blueUniversity"]["name"]);
+                  $("#orangeUniversityNameTop").text(d["orangeUniversity"]["name"]);
+
+                  $("#blueScoreTop").text(d["seriesScore"]["blueScore"]);
+                  $("#orangeScoreTop").text(d["seriesScore"]["orangeScore"]);
+
+                  $("#casterOneImage").attr("src", d["casterOne"]["picture"]);
+                  $("#casterTwoImage").attr("src", d["casterTwo"]["picture"]);
+                  $("#casterOneTwitter").text(d["casterOne"]["twitter"]);
+                  $("#casterTwoTwitter").text(d["casterTwo"]["twitter"]);
+
+                  $("#blueTeamName").text(d["blueTeam"]["name"]);
+                  $("#blueTeamNameShort").text(d["blueTeam"]["name_short"]);
+                  $("#orangeTeamName").text(d["orangeTeam"]["name"]);
+                  $("#orangeTeamNameShort").text(d["orangeTeam"]["name_short"]);
+
+                  if (d["blueTeamAdvancedSettings"]["usePrimaryLogo"]) {
+                    $("#blueTeamLogo").attr("src", d["blueUniversity"]["logo_primary"]);
+                    $("#blueTeamLogoTop").attr("src", d["blueUniversity"]["logo_primary"]);
+                  } else if (d["blueTeamAdvancedSettings"]["useSecondaryLogo"]) {
+                    $("#blueTeamLogo").attr("src", d["blueUniversity"]["logo_secondary"]);
+                    $("#blueTeamLogoTop").attr("src", d["blueUniversity"]["logo_secondary"]);
+                  } else if (d["blueTeamAdvancedSettings"]["useAlternateLogo"]) {
+                    $("#blueTeamLogo").attr("src", d["blueUniversity"]["logo_alternate"]);
+                    $("#blueTeamLogoTop").attr("src", d["blueUniversity"]["logo_alternate"]);
+                  }
+
+                  if (d["orangeTeamAdvancedSettings"]["usePrimaryLogo"]) {
+                    $("#orangeTeamLogo").attr("src", d["orangeUniversity"]["logo_primary"]);
+                    $("#orangeTeamLogoTop").attr("src", d["orangeUniversity"]["logo_primary"]);
+                  } else if (d["orangeTeamAdvancedSettings"]["useSecondaryLogo"]) {
+                    $("#orangeTeamLogo").attr("src", d["orangeUniversity"]["logo_secondary"]);
+                    $("#orangeTeamLogoTop").attr("src", d["orangeUniversity"]["logo_secondary"]);
+                  } else if (d["orangeTeamAdvancedSettings"]["useAlternateLogo"]) {
+                    $("#orangeTeamLogo").attr("src", d["orangeUniversity"]["logo_alternate"]);
+                    $("#orangeTeamLogoTop").attr("src", d["orangeUniversity"]["logo_alternate"]);
+                  }
+
+                  $("#matchInfo").text(d["matchInfo"])
+
+                  $("#blueTeamName").css("display", d["blueTeamAdvancedSettings"]["useShortTeamName"] ? "none" : "block");
+                  $("#blueTeamNameShort").css("display", d["blueTeamAdvancedSettings"]["useShortTeamName"] ? "block" : "none");
+
+                  $("#orangeTeamName").css("display", d["orangeTeamAdvancedSettings"]["useShortTeamName"] ? "none" : "block");
+                  $("#orangeTeamNameShort").css("display", d["orangeTeamAdvancedSettings"]["useShortTeamName"] ? "block" : "none");
+
+                  $("#blueTeamNameContainer").css("display", d["blueTeamAdvancedSettings"]["hideTeamName"] ? "none" : "block");
+                  $("#orangeTeamNameContainer").css("display", d["orangeTeamAdvancedSettings"]["hideTeamName"] ? "none" : "block");
+
+                  $("#casterOneImageContainer").css("display", d["talentAdvancedSettings"]["hideCasterOneImage"] ? "none" : "block")
+                  $("#casterOneTwitterContainer").css("display", d["talentAdvancedSettings"]["hideCasterOneTwitter"] ? "none" : "block")
+
+                  $("#casterTwoImageContainer").css("display", d["talentAdvancedSettings"]["hideCasterTwoImage"] ? "none" : "block")
+                  $("#casterTwoTwitterContainer").css("display", d["talentAdvancedSettings"]["hideCasterTwoTwitter"] ? "none" : "block")
+
+                  let player_convert = {
+                    0: "player_one",
+                    1: "player_two",
+                    2: "player_three",
+                    3: "player_four",
+                    4: "player_five",
+                    5: "player_six"
+                  }
+
+                  $("#bluePlayer1").text("");
+                  $("#bluePlayer2").text("");
+                  $("#bluePlayer3").text("");
+                  $("#orangePlayer1").text("");
+                  $("#orangePlayer2").text("");
+                  $("#orangePlayer3").text("");
+
+                  let blueCount = 0;
+                  let orangeCount = 0;
+                  for (let i = 0; i < 6; i++) {
+                    if (d["blueTeamAdvancedSettings"]["startingPlayers"][i] && blueCount < 3) {
+                      blueCount++;
+                      $(`#bluePlayer${blueCount}`).text(d["blueTeam"][player_convert[i]]);
+                    }
+                    if (d["orangeTeamAdvancedSettings"]["startingPlayers"][i] && orangeCount < 3) {
+                      orangeCount++;
+                      $(`#orangePlayer${orangeCount}`).text(d["orangeTeam"][player_convert[i]]);
+                    } 
+                  }
+
+                  let numConvert = {
+                    1: "One",
+                    2: "Two",
+                    3: "Three",
+                    4: "Four",
+                    5: "Five",
+                    6: "Six",
+                    7: "Seven"
+                  }
+
+                  $("#gameResults").css("display", d[`seriesScore`]["blueScore"] !== 0 || d[`seriesScore`]["orangeScore"] !== 0 ? "block" : "none")
+
+                  for (let i = 1; i <= 7; i++) {
+                    $(`#match${i}Container`).css("display", d[`game${numConvert[i]}Score`]["blueScore"] !== d[`game${numConvert[i]}Score`]["orangeScore"] ? "block" : "none");
+                    
+                    if (d["blueTeamAdvancedSettings"]["usePrimaryLogo"]) {
+                      $(`#match${i}BlueLogo`).attr("src", d["blueUniversity"]["logo_primary"]);
+                    } else if (d["blueTeamAdvancedSettings"]["useSecondaryLogo"]) {
+                      $(`#match${i}BlueLogo`).attr("src", d["blueUniversity"]["logo_secondary"]);
+                    } else if (d["blueTeamAdvancedSettings"]["useAlternateLogo"]) {
+                      $(`#match${i}BlueLogo`).attr("src", d["blueUniversity"]["logo_alternate"]);
+                    }
+
+                    $(`#match${i}BlueScore`).text(d[`game${numConvert[i]}Score`]["blueScore"]);
+
+                    if (d["orangeTeamAdvancedSettings"]["usePrimaryLogo"]) {
+                      $(`#match${i}OrangeLogo`).attr("src", d["orangeUniversity"]["logo_primary"]);
+                    } else if (d["orangeTeamAdvancedSettings"]["useSecondaryLogo"]) {
+                      $(`#match${i}OrangeLogo`).attr("src", d["orangeUniversity"]["logo_secondary"]);
+                    } else if (d["orangeTeamAdvancedSettings"]["useAlternateLogo"]) {
+                      $(`#match${i}OrangeLogo`).attr("src", d["orangeUniversity"]["logo_alternate"]);
+                    }
+                    
+                    $(`#match${i}OrangeScore`).text(d[`game${numConvert[i]}Score`]["orangeScore"]);
+                    $(`#match${i}BlueLogoContainer`).css("opacity", d[`game${numConvert[i]}Score`]["blueScore"] > d[`game${numConvert[i]}Score`]["orangeScore"] ? "1" : "0.5");
+                    $(`#match${i}OrangeLogoContainer`).css("opacity", d[`game${numConvert[i]}Score`]["blueScore"] < d[`game${numConvert[i]}Score`]["orangeScore"] ? "1" : "0.5")
+                  }
+            })
+          });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,159 @@
+@font-face {
+    font-family: "ApekMk2";
+    src: url(../fonts/ApexMk2-Regular.otf);
+}
+
+:root {
+    --default-news-ticker-left: 302px;
+    --default-news-ticker-top: 1003px;
+    --default-news-ticker-width: 1332px;
+    --default-news-ticker-height: 45px;
+
+    --default-news-ticker-headline-left: 307px;
+    --default-news-ticker-headline-top: 922px;
+    --default-news-ticker-headline-width: 1322px;
+    --default-news-ticker-headline-height: 82px;
+    --default-news-ticker-headline-fontSize: 52px;
+}
+
+body {
+    width: 1920px;
+    height: 1080px;
+    overflow: hidden;
+}
+
+#tickerOverlay {
+    position: absolute;
+    width: 1920px;
+    height: 1080px;
+    background-image: url("../assets/ticker.png");
+    z-index: 1;
+}
+
+#newsStories {
+    position: absolute;
+    overflow: hidden;
+    top: var(--default-news-ticker-top);
+    left: var(--default-news-ticker-left);
+    width: var(--default-news-ticker-width);
+    height: var(--default-news-ticker-height);
+    z-index: 2;
+    font-size: 28px;
+    line-height: 45px;
+    font-family: "ApexMk2";
+    color: black;
+}
+
+#newsStories div {
+    display: inline-block;
+}
+
+#loop {
+    white-space: nowrap;
+    animation: loop-anim 15s linear infinite;
+}
+
+@keyframes loop-anim {
+    0% {
+        margin-left: 0;
+    }
+    100% {
+        margin-left: -50% /* This works because of the div between "outer" and "loop" */
+    }
+}
+
+#newsHeadline {
+    z-index: 2;
+    position: absolute;
+    top: var(--default-news-ticker-headline-top);
+    left: var(--default-news-ticker-headline-left);
+    width: var(--default-news-ticker-headline-width);
+    height: var(--default-news-ticker-headline-height);
+    font-size: var(--default-news-ticker-headline-fontSize);
+    line-height: 82px;
+    font-family: "ApexMk2";
+    color: white;
+    overflow: hidden;
+}
+
+.teamLogo {
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+#currentGameContainer {
+    position: absolute;
+    width: 222px;
+    height: 125px;
+    z-index: 2;
+    top: 922px;
+    left: 81px;
+}
+
+#currentGameText {
+    position: relative;
+    top: 90px;
+    width: 100%;
+    height: 34px;
+    line-height: 34px;
+    font-family: "ApexMk2";
+    color: white;
+    font-size: 24px;
+    text-align: center;
+}
+
+#blueTeamLogoContainer {
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    height: 65%;
+    width: 30%;
+}
+
+#orangeTeamLogoContainer {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    height: 65%;
+    width: 30%;
+}
+
+.teamScore {
+    position: absolute;
+    top: 15px;
+    width: 10%;
+    height: 65px;
+    line-height: 65px;
+    font-family: "ApexMk2";
+    color: white;
+    font-size: 34px;
+    text-align: center;
+}
+
+#blueTeamScore {
+    left: 75px;
+}
+
+#orangeTeamScore {
+    right: 75px;
+}
+
+#scoreSplitterText {
+    position: absolute;
+    top: 15px;
+    text-align: center;
+    width: 100%;
+    height: 65px;
+    line-height: 65px;
+    font-family: "ApexMk2";
+    color: white;
+    font-size: 34px;
+}
